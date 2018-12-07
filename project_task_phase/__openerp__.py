@@ -24,17 +24,28 @@
     'category': 'Projects & Services',
     'sequence': 14,
     'summary': '',
+    'description': """
+Project Task Phase
+==================
+Add project phases to tasks
+    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
-    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
         'project',
+        'project_forecast',
+        'sale_update',
     ],
     'data': [
         'project_view.xml',
-        'security/ir.model.access.csv',
+        'project_forecast_view.xml',
+        # TODO: Following code break the installation of the module.
+        # The error is we use a group defined on module "project_update",
+        # and we can't add a dependency to avoid cyclic dependency.
+        # TODO: TO FIX
+        # 'security/ir.model.access.csv',
     ],
     'demo': [
     ],
@@ -44,3 +55,4 @@
     'auto_install': False,
     'application': False,
 }
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

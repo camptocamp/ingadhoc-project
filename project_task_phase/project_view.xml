@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
+
         <!-- Task -->
-        <record id="view_task_search_form" model="ir.ui.view">
+        <record id="view_task_search_form_inh" model="ir.ui.view">
             <field name="name">project.task.filter</field>
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_search_form"/>
@@ -11,33 +12,37 @@
                     <field name="phase_id"/>
                 </field>
                 <filter position="after">
-                    <filter string="Phase" name="group_phase_id" icon="terp-folder-violet" domain="[]" context="{'group_by':'phase_id'}"/>
+                    <filter string="Phase" name="group_phase_id"
+                            icon="terp-folder-violet" domain="[]"
+                            context="{'group_by':'phase_id'}"/>
                 </filter>
             </field>
         </record>
 
-        <record id="view_task_form" model="ir.ui.view">
+        <record id="view_task_form_inh" model="ir.ui.view">
             <field name="name">project.task.form</field>
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
                 <field name="project_id" position="after">
-                    <field name="phase_id"/>
+                    <field name="master_id" invisible="True"/>
+                    <field name="phase_id"
+                           domain="[('project_id','=',project_id)]"
+                           context="{'default_project_id' : project_id}"/>
                 </field>
             </field>
         </record>
 
-        <record id="view_task_tree" model="ir.ui.view">
+        <record id="view_task_tree_inh" model="ir.ui.view">
             <field name="name">project.task.tree</field>
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_tree2"/>
             <field name="arch" type="xml">
-                <field name="stage_id" position="after">
-                    <field name="phase_id" invisible="True"/>
+                <field name="name" position="after">
+                    <field name="phase_id"/>
                 </field>
             </field>
         </record>
-
 
         <!-- Task Phases -->
         <record id="task_phase_search" model="ir.ui.view">
@@ -45,7 +50,8 @@
             <field name="model">project.task.phase</field>
             <field name="arch" type="xml">
                 <search string="Tasks Phases">
-                   <field name="name"/>
+                    <field name="name"/>
+                    <field name="project_id"/>
                 </search>
             </field>
         </record>
@@ -55,11 +61,21 @@
             <field name="model">project.task.phase</field>
             <field name="arch" type="xml">
                 <form string="Task Phase">
-                    <sheet>
+                    <group>
                         <group>
                             <field name="name"/>
+                            <field name="project_id" invisible="True"/>
                         </group>
-                    </sheet>
+                        <group>
+                            <field name="date_min"/>
+                            <field name="date_max"/>
+                        </group>
+                    </group>
+                    <group></group>
+                    <group>
+                        <field name="task_ids" widget="many2many"
+                               domain="[('project_id','=',project_id)]"/>
+                    </group>
                 </form>
             </field>
         </record>
@@ -71,6 +87,9 @@
                 <tree string="Task Phase">
                     <field name="sequence" widget="handle"/>
                     <field name="name"/>
+                    <field name="project_id" invisible="True"/>
+                    <field name="date_min"/>
+                    <field name="date_max"/>
                 </tree>
             </field>
         </record>
@@ -81,8 +100,5 @@
             <field name="view_type">form</field>
             <field name="view_id" ref="task_phase_tree"/>
         </record>
-
-        <menuitem action="open_task_phase_form" id="menu_task_phases_view" parent="project.menu_project_config" sequence="5"/>
-
     </data>
-</openerp>
+</odoo>

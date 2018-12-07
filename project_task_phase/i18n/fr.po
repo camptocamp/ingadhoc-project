@@ -1,0 +1,123 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* project_task_phase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-17 09:18+0000\n"
+"PO-Revision-Date: 2015-11-17 09:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_id
+msgid "ID"
+msgstr "Identifiant"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_forecast_phase_id
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_id_6132
+#: model:ir.ui.view,arch_db:project_task_phase.project_forecast_view_search_inh17112015
+#: model:ir.ui.view,arch_db:project_task_phase.view_task_search_form_inh
+msgid "Phase"
+msgstr "Phase"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_name
+msgid "Phase Name"
+msgstr "Nom"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_project_id
+msgid "Project"
+msgstr "Projet"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: project_task_phase
+#: model:ir.model,name:project_task_phase.model_project_task
+msgid "Task"
+msgstr "Tâche"
+
+#. module: project_task_phase
+#: model:ir.model,name:project_task_phase.model_project_task_phase
+#: model:ir.ui.view,arch_db:project_task_phase.task_phase_edit
+#: model:ir.ui.view,arch_db:project_task_phase.task_phase_tree
+msgid "Task Phase"
+msgstr "Phase"
+
+#. module: project_task_phase
+#: model:ir.actions.act_window,name:project_task_phase.open_task_phase_form
+#: model:ir.ui.menu,name:project_task_phase.menu_task_phases_view
+msgid "Task Phases"
+msgstr "Phases"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_task_ids
+msgid "Tasks"
+msgstr "Tâches"
+
+#. module: project_task_phase
+#: model:ir.ui.view,arch_db:project_task_phase.task_phase_search
+msgid "Tasks Phases"
+msgstr "Phases"
+
+#. module: project_task_phase
+#: model:ir.model,name:project_task_phase.model_project_forecast
+msgid "project.forecast"
+msgstr "project.forecast"
+
+#. module: project_task_phase
+#: model:ir.ui.menu,name:project_task_phase.project_forecast_report_all_activities
+#: model:ir.ui.menu,name:project_task_phase.project_forecast_report_all_activities2
+msgid "Team workload"
+msgstr "Plan de charge"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_date_max
+msgid "Max. date"
+msgstr "Date de fin"
+
+#. module: project_task_phase
+#: model:ir.model.fields,field_description:project_task_phase.field_project_task_phase_date_min
+msgid "Min. date"
+msgstr "Date de début"

@@ -41,11 +41,7 @@ Add project phases to tasks
     'data': [
         'project_view.xml',
         'project_forecast_view.xml',
-        # TODO: Following code break the installation of the module.
-        # The error is we use a group defined on module "project_update",
-        # and we can't add a dependency to avoid cyclic dependency.
-        # TODO: TO FIX
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
     ],
     'demo': [
     ],

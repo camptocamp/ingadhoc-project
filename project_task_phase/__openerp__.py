@@ -19,36 +19,25 @@
 #
 ##############################################################################
 {
-    'name': 'Project Task Phase',
-    'version': '9.0.1.0.0',
-    'category': 'Projects & Services',
-    'sequence': 14,
-    'summary': '',
-    'description': """
+    "name": "Project Task Phase",
+    "version": "9.0.1.0.0",
+    "category": "Projects & Services",
+    "sequence": 14,
+    "summary": "",
+    "description": """
 Project Task Phase
 ==================
 Add project phases to tasks
     """,
-    'author': 'ADHOC SA',
-    'website': 'www.adhoc.com.ar',
-    'images': [
-    ],
-    'depends': [
-        'project',
-        'project_forecast',
-        'sale_update',
-    ],
-    'data': [
-        'project_view.xml',
-        'project_forecast_view.xml',
-        'security/ir.model.access.csv',
-    ],
-    'demo': [
-    ],
-    'test': [
-    ],
-    'installable': True,
-    'auto_install': False,
-    'application': False,
+    "author": "ADHOC SA",
+    "website": "www.adhoc.com.ar",
+    "images": [],
+    "depends": ["project", "sale_update"],
+    "data": ["project_view.xml", "security/ir.model.access.csv"],
+    "demo": [],
+    "test": [],
+    "installable": True,
+    "auto_install": False,
+    "application": False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

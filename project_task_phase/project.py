@@ -50,7 +50,6 @@ class project_task(osv.osv):
 
     _columns = {
         'phase_id': fields.many2one('project.task.phase', 'Phase', ),
-        'master_id': fields.many2one('master.project', 'Master Project'),
     }
 
     def _read_group_phase_ids(self, cr, uid, ids, domain,

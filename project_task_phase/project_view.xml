@@ -25,7 +25,6 @@
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
                 <field name="project_id" position="after">
-                    <field name="master_id" invisible="True"/>
                     <field name="phase_id"
                            domain="[('project_id','=',project_id)]"
                            context="{'default_project_id' : project_id}"/>
